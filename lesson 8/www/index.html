@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" >
+		<title>Кейтеринг</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="css/jquery.formstyler.css">
+		<link rel="stylesheet" href="css/slicknav.css" />
+		<link rel="stylesheet" href="css/all.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<a href="#">
+						<img src="img/logo.png">
+					</a>
+				</div>
+				<div class="header-nav">
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">Меню</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Новости</a></li>
+					</ul>
+				</div>
+				<div class="icon-nav">
+					<ul>
+						<li><a href="#" class="vk"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="google"></a></li>
+					</ul>
+				</div>		
+			</div>
+		</div>
+		<div class="main">
+				<div class="call-to-action vertical-align">
+					<div class="call-to-action-text">
+						<h1>Wow Catering</h1>
+						<span>Ресторан выездного обслуживания</span>
+						<a href="#" class="btn _order-modal-open">ЗАКАЗАТЬ</a>
+					</div>
+				</div>
+				<div class="about-us">
+					<div class="container">
+						<h4>Wow Catering</h4>
+						<p>Wow Catering Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p>
+					</div>
+				</div>
+				<div class="services-wrap">
+					<div class="container">
+						<div class="row">
+							<div class="service">
+								<img src="img/service-img.jpg" alt="">
+								<div class="service-text vertical-align">
+									<a href="#" class="vertical-align">
+										<span>Свадьбы</span>
+									</a>
+								</div>
+							</div>
+							<div class="service">
+								<img src="img/service-img-1.jpg" alt="">
+								<div class="service-text vertical-align">
+									<a href="#" class="vertical-align">
+										<span>Банкет</span>
+									</a>
+								</div>
+							</div>
+							<div class="service">
+								<img src="img/service-img-2.jpg" alt="">
+								<div class="service-text vertical-align">
+									<a href="#" class="vertical-align">
+										<span>Выездное ресторанное обслуживание</span>
+									</a>
+								</div>
+							</div>
+							<div class="service">
+								<img src="img/service-img-3.jpg" alt="">
+								<div class="service-text vertical-align">
+									<a href="#" class="vertical-align">
+										<span>Фуршет</span>
+									</a>
+								</div>
+							</div>
+							<div class="service">
+								<img src="img/service-img-4.jpg" alt="">
+								<div class="service-text vertical-align">
+									<a href="#" class="vertical-align">
+										<span>Барбекю</span>
+									</a>
+								</div>
+							</div>
+							<div class="service">
+								<img src="img/service-img-5.jpg" alt="">
+								<div class="service-text vertical-align">
+									<a href="#" class="vertical-align">
+										<span>Кофе-бррейки</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="footer">
+			<div class="container">	
+				<div class="contacts">
+					<h2>Wow Catering</h2>
+					<span>ул. Гуданова 4\10</span>
+					<span>Харьков, 61024</span>
+					<span>Тел.: (097) 905-05-50</span>
+					<span>contacts@wowpizza.com.ua</span>
+				</div>
+				<div class="footer-nav">
+					<ul>
+						<li><a href="#" class="vk-white"></a></li>
+						<li><a href="#" class="twitter-white"></a></li>
+						<li><a href="#" class="google-white"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- MODAL WINDOWS -->
+		<div class="modal" id="order">
+			<div class="close-ic">
+				<img class="close" src="img/close-ic.png"></img>
+			</div>
+			<h2>Форма заказа</h2>
+			<span>Wow Catering</span>
+			<form>
+				<div class="left-form">
+					<input type="text" class="form-control" id="user" name="user-name" value="" placeholder="Имя">
+					<input type="text" class="form-control" id="phone" name="phone" value="" placeholder="Телефон">
+					<input type="text" class="form-control" id="e-mail" name="e-mail" value="" placeholder="E-mail">
+				</div>
+				<div class="right-form">
+					<select class="form-control" placeholder="Выбрать услугу">
+						<option value="">Свадьба</option>
+						<option value="">Банкет</option>
+						<option value="">Фуршет</option>
+						<option value="">Аренда</option>
+						<option value="">Коктейль</option>
+						<option value="">Пикник</option>
+						<option value="">Барбекю</option>
+						<option value="">Кофе-брейк</option>
+						<option value="">Выездное ресторанное обслуживание</option>
+					</select>
+					<textarea name="comment" placeholder="Комментарий" class="textarea"></textarea>
+				</div>	
+			</form>
+			<a href="#" class="form-btn close">Заказать</a>
+<!-- 			<form>
+				<label for="user">Имя</label> 
+				<input type="text" name="user" required autofocus value="" placeholder="Введите Имя">
+				<input type="password" name="pass" disabled>
+				<input type="checkbox" name="check1" value="" checked>
+				<input type="checkbox" name="check2" value="">	
+				<input type="radio" name="radio" value="">
+				<input type="radio" name="radio" value="">
+				<select name="" id="">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+				<textarea name="comment"></textarea>
+				<input type="number" name="count" step="5" min="0" max="100">
+				<input type="file" name="file" value="" multiple="">
+				<input type="submit" name="" value="Send">
+				<input type="reset" name="" value="Reset">
+				<input type="hidden" name="" value="заявка на курс php">
+				<button type="submit">Send</button>
+			</form> -->
+		</div>
+
+		<!-- JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="js/jquery.bpopup.min.js"></script>
+		<script src="js/jquery.formstyler.min.js"></script>
+		<script src="js/jquery.slicknav.min.js"></script>
+		<!-- init all jQuery plugin -->
+		<script src="js/init.js"></script>
+	</body>
+</html>
