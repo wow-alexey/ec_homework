@@ -450,7 +450,6 @@ div.right-form textarea{
 	    margin: 30px 25px 0 0;
     }
     .slicknav_btn {
-		margin: 0 auto;
 		border-radius: 0;
 		background-color: inherit;
 		text-shadow: none;
@@ -492,12 +491,21 @@ div.right-form textarea{
     }
 	div.left-form {
 	    margin-left: 2%;
-	    width: 47%;
+    	width: 96%;
 	}
 	div.right-form {
-	    margin-left: 3%;
-	    width: 46%;
+		margin-left: 2%;
+	    width: 96%;
+	    margin-top: 30px;
 	}
+	.form-btn{
+	margin-top: 4%;
+    margin-bottom: 2%;
+	}
+	.about-us div.container p {
+    font-size: 20px;
+    padding: 0 0;
+    } 
 }
 @media (max-width: 599px){
 	.call-to-action {
@@ -522,6 +530,9 @@ div.right-form textarea{
 	}
 	.contacts span{
 		font-size: 12px;
+	}
+	.slicknav_menu .slicknav_icon {
+   		margin: 15% 0 0 0.438em;
 	}
 }
 @media (max-width: 479px){
