@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,21 +30,31 @@
                 </div> 
                 <div class="header-slogan">
                     <span>Производство и продажа отделочных <br> материалов из натурального дерева</span>
-                </div>                
-                <div class="header-ic pull-right">
+                </div>
+                <div class="header-contacts">
+                    <span>(926) 779-79-74   (495) 940-76-99  |  s-leswood@ya.ru</span>
+                </div>
+                <div class="header-ic">
                     <ul>
                         <li><a href="#" class="note"></a></li>
                         <li><a href="#" class="cell"></a></li>
                     </ul>
-                </div>                
-                <div class="header-contacts pull-right">
-                    <span>(926) 779-79-74   (495) 940-76-99  |  s-leswood@ya.ru</span>
                 </div>
             </div>
         </div>
         <div class="header-nav">
             <div class="container">
-                <ul class="list-inline pull-left">
+
+                <!-- mobile btn -->
+                <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#list-inline" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- header-nav -->
+                <ul class="list-inline pull-left collapse navbar-collapse" id="list-inline">
                     <li class="active"><a href="#">Продукция</a></li>
                     <li><a href="#">Цены</a></li>
                     <li><a href="#">Фотогалерея</a></li>
@@ -52,6 +62,8 @@
                     <li><a href="#">Где купить</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
+
+                <!-- search-form -->
                 <div class="search-form pull-right">
                     <form>
                         <div class="input-group">
@@ -68,8 +80,8 @@
     <div class="main">
         <div class="container">
             <div class="row">
-                <div class="sidebar">
-                    <div class="col-sm-3">
+                <div class="sidebar sidebar-mobile">
+                    <div class="col-xs-12 col-md-3 sidebar-hidden">
                         <div class="sidebar-category">
                             <div class="sidebar-category-title">
                                 <span>Популярное</span>
@@ -177,11 +189,11 @@
                                 <div class="catalog-item-title">
                                     <span>Стеновые изделия</span>
                                 </div>
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel-group" id="accordion-b" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingSix">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion-b" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                                                 Евровагонка
                                                 </a>
                                             </h4>
@@ -195,7 +207,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingSeven">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-b" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                                                 Вагонка-штиль
                                                 </a>
                                             </h4>
@@ -209,7 +221,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingEight">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-b" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                                                 Имитация бруса
                                                 </a>
                                             </h4>
@@ -223,7 +235,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingNine">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-b" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                                                 Блок-хаус
                                                 </a>
                                             </h4>
@@ -237,7 +249,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTen">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-b" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                                                 Планкен
                                                 </a>
                                             </h4>
@@ -254,11 +266,11 @@
                                 <div class="catalog-item-title">
                                     <span>Напольные покрытия</span>
                                 </div>
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel-group" id="accordion-c" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="heading-11">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-11" aria-expanded="true" aria-controls="collapse-11">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion-c" href="#collapse-11" aria-expanded="true" aria-controls="collapse-11">
                                                 Половая доска
                                                 </a>
                                             </h4>
@@ -272,7 +284,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="heading-12">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-12" aria-expanded="false" aria-controls="collapse-12">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-c" href="#collapse-12" aria-expanded="false" aria-controls="collapse-12">
                                                 Паркетная доска
                                                 </a>
                                             </h4>
@@ -286,7 +298,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="heading-13">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-13" aria-expanded="false" aria-controls="collapse-13">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-c" href="#collapse-13" aria-expanded="false" aria-controls="collapse-13">
                                                 Палубная доска
                                                 </a>
                                             </h4>
@@ -300,7 +312,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="heading-14">
                                             <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-14" aria-expanded="false" aria-controls="collapse-14e">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-c" href="#collapse-14" aria-expanded="false" aria-controls="collapse-14e">
                                                 Террасная доска
                                                 </a>
                                             </h4>
@@ -315,20 +327,33 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
+                      
+                <!-- CONTENT -->
                 <div class="content">
-                    <div class="col-sm-9">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="#"><img src="img/img-long-left.png"></a>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="row">
-                                    <div class="col-sm-6"><a href="#"><img src="img/img-top-left.png"></a></div>
-                                    <div class="col-sm-6"><a href="#"><img src="img/img-top-right.png"></a></div>
+                    <!-- кнопка открытия сайдбара на мобильных устройствах -->
+                    <div class="col-xs-2 hidden-md hidden-lg">
+                        <div class="sidebar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> 
+                        </div>
+                    </div>
+                    <div class="col-xs-11 col-md-9">
+                        <div class="popular-category">    
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-4">
+                                    <a href="#"><img src="img/img-long-left.png"></a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-12"><a href="#"><img src="img/img-bottom.png"></a></div>
+                                <div class="col-xs-6 col-sm-8">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6"><a href="#"><img src="img/img-top-left.png"></a></div>
+                                        <div class="col-xs-12 col-sm-6"><a href="#"><img src="img/img-top-right.png"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12"><a href="#"><img src="img/img-bottom.png"></a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -472,10 +497,12 @@
             </div>
         </div>
     </div>
+
+    <!-- FOOTER -->
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-xs-12 col-sm-3">
                     <div class="footer-catalog">
                         <h5>Каталог</h5>
                         <ul>
@@ -487,7 +514,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-xs-12 col-sm-3">
                     <div class="footer-buyers">
                         <h5>Покупателям</h5>
                         <ul>
@@ -498,7 +525,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-xs-12 col-sm-3">
                     <div class="footer-realwood">
                         <h5>Realwood</h5>
                         <ul>
@@ -508,22 +535,24 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <img src="img/footer-logo.png" class="footer-img"></img>
-                    <div class="telephones">
-                        <ul class="left">
-                            <li>(495) 940-76-99</li>
-                            <li>(495) 505-18-97</li>
-                        </ul>
-                        <ul class="right">
-                            <li>(926) 779-76-79</li>
-                            <li>(926) 779-79-74</li>
-                        </ul>
-                    </div>
-                    <div class="mail">
-                        <span class="e-mail">s-leswood@ya.ru</span>
-                        <span class="adress"> МО, ПО. Путилково 69км. МКАД, ЗАО Гринвуд, строение 9, оф. 85 <br>(от МКАД 200 метров)</span>
-                    </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="footer-contacts">
+                        <img src="img/footer-logo.png" class="footer-img"></img>
+                        <div class="telephones">
+                            <ul class="left">
+                                <li>(495) 940-76-99</li>
+                                <li>(495) 505-18-97</li>
+                            </ul>
+                            <ul class="right">
+                                <li>(926) 779-76-79</li>
+                                <li>(926) 779-79-74</li>
+                            </ul>
+                        </div>
+                        <div class="mail">
+                            <span class="e-mail">s-leswood@ya.ru</span>
+                            <span class="adress"> МО, ПО. Путилково 69км. МКАД, ЗАО Гринвуд, строение 9, оф. 85 <br>(от МКАД 200 метров)</span>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </div>    
@@ -532,5 +561,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        var sidebarBtn = $('.sidebar-btn');
+        var sidebar = $('.sidebar-mobile');
+        sidebarBtn.on('click', function(){
+            sidebarBtn.toggleClass('open');
+            sidebar.toggleClass('open');
+        });
+    </script>
   </body>
 </html>
