@@ -1,0 +1,344 @@
+// custom var
+@import "custom";
+
+// fonts 
+@import "fonts";
+
+// bootstap
+@import "bootstrap";
+
+// reset
+@import "reset";
+
+// default-class
+@import "default-class";
+
+// layout
+@import "layout";
+
+//style for contacts
+.telephones{
+	display: inline-block;
+	position: relative;
+	img{
+		position: absolute;
+		left: 32%;
+   		top: 33%;
+	}
+	.numbers{
+		display: inline-block;
+		margin-left: 115px;	
+		span{
+			color: $btnGreyColor;
+			letter-spacing: inherit;
+			margin: 0;
+			font-weight: 700;
+		}
+	}
+}
+.skype{
+	display: inline-block;
+	float: right;
+	img{
+		display: inline-block;
+		padding-right: 22%;
+	}
+	span{
+		color: $btnGreyColor !important;
+		font-size: 12px !important;
+		letter-spacing: inherit !important;
+		text-align: inherit !important;
+		display: inline-block;
+		font-weight: 700;
+	}
+}
+
+//style for header-nav
+.header-nav{
+	padding: 2% 5%;
+	background: $lightGrayBg;
+	text-align: center;
+	ul{
+		margin: 0 auto;
+		padding: 0;
+		text-transform: uppercase;
+		li{
+			display: inline-block;
+			padding: 0 1%;			
+		}
+		.add-img{
+			position: relative;
+			padding-left: 3%;
+			img{
+				position: absolute;
+				left: 0px;
+    			bottom: -6px;
+			}
+		}
+	}
+}
+
+// style for corusel on index
+.carousel{
+	margin-right: -15px;
+}
+.glyphicon-chevron-left:before {
+    content: '';
+}
+.glyphicon-chevron-right:before {
+    content: '';
+}
+.carousel-caption{
+	left: 0;
+	right: auto;
+	bottom: 60px;
+	text-align: left;
+	padding:20px 25px 20px 70px;
+	background: $lightGreen;	
+	span{
+		color: $greyTextColor;
+		font-size: 2.143em;
+		text-shadow: none;
+	}
+}
+.carousel-indicators{
+	left: 11%;
+    bottom: 2%; 
+		li {
+		    background-color: $lightGreen;
+		    border: 1px solid $lightGreen;
+		    vertical-align: middle;
+		}
+		.active {
+		    width: 15px;
+		    height: 15px;
+		    border: 2px solid $lightGreen;
+		    background-color: transparent;
+		}
+}
+
+.advantages{
+	@extend %indents70;
+}
+.contacts{
+	padding-top: 25px;
+		.logo{
+			padding-bottom: 18px;
+		}
+		span{
+			display: block;
+    		text-align: center; 
+    		letter-spacing: 3px;   		
+		}
+		.slogan{
+    			font-size: 18px;
+			    font-weight: 700;
+			    color: #4b4b4b;
+    	}
+    	.slogan-bottom{
+    			padding-top: 14px;
+    	}
+		span+span{
+			font-size: 14px;
+		    margin-top: 15px;
+		    color: #8c8d8f;
+		}
+}
+.sidebar-nav{
+	margin-top: 95px;
+	font-size: 12px;
+		li{
+			color:$greyTextColor;			
+		}
+		li+li{
+			margin-top: 17px;
+		}
+}
+
+//advantages block
+.advantages{
+	h3{
+		text-align: center;
+		color: $greyTextColor;
+		margin: 0 0 40px 0;
+	}
+	img{
+		display: block;
+    	margin: 0 auto;
+    	padding-bottom: 25px;
+	}
+	.advantages-span{
+    	display: inline-block;
+    	text-align:center;
+    	line-height: 1.5;
+    	color: $greyTextColor;
+	}
+}
+
+//buy-diplom block
+.buy-diplom{
+	@extend %indents70;
+	.button{
+		margin-top: 30px;
+	}
+}
+
+//why 
+.why{
+	padding-top: 70px;
+		.title{
+			padding-top: 33px;
+		}
+		.why-item{
+			height: 576px;
+			p{
+				margin: 0 30px;
+				text-indent: 1.5em;												
+			}
+			.indentOff{
+				text-indent: inherit;
+			}	
+		}		
+}
+
+//reviews
+.reviews{
+	@extend %indents70;
+	.all-reviews{
+		margin: 0 -30px;		
+			.review-title{
+				background: $lightGreen;
+				padding:9px 30px;
+				overflow: hidden;
+			}
+			.review-text{
+				padding: 13px 30px;
+				text-align: justify;
+			}
+			.button{
+				margin-top: 17px;
+			}
+	}
+}
+
+//question
+.input-grup{
+	position: relative;
+	display: block;
+	z-index: 1;
+	+ .input-grup{
+		margin-top: 20px;
+	}
+	
+	.input-element{
+		background: transparent;
+		border: 1px solid $borderGrey;
+    	height: 60px;
+    	width: 100%;
+    	border-radius: 33px;
+    	padding-left: 8%;
+		&:focus{
+			& + .placeholder{
+				opacity: 0;
+			}
+		}
+	}
+	.placeholder{
+		position: absolute;
+		left: 30px;
+		top: 50%;
+		color: $borderGrey;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: -1;
+		-webkit-transition:all .5s linear;
+		-moz-transition:all .5s linear;
+		-ms-transition:all .5s linear;
+		-o-transition:all .5s linear;
+		transition:all .5s linear;
+		sup{
+			color: red;
+		}
+	}
+}
+
+.comment{
+	position: relative;
+	display: block;
+	z-index: 1;
+}	
+.comment-form{
+	background: transparent;
+	border: 1px solid $borderGrey;
+    height: 140px;
+    width: 100%;
+    border-radius: 33px;
+    padding: 4% 8% 4% 8%;
+	&:focus{
+		& + .placeholder{
+			opacity: 0;
+		}
+	}
+}
+.placeholder{
+	position: absolute;
+	left: 8%;
+	top: 20%;
+	color: $borderGrey;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: -1;
+	-webkit-transition:all .5s linear;
+	-moz-transition:all .5s linear;
+	-ms-transition:all .5s linear;
+	-o-transition:all .5s linear;
+	transition:all .5s linear;
+	sup{
+		color: red;
+	}
+}
+
+//questions
+.questions{
+	text-align: center;
+	.button{
+		margin-top: 24px;
+	}
+	.button:hover{
+		text-decoration: none;
+    	text-shadow: 1px 1px 1px, 0 0 0.1em $greyTextColor;
+    	color: $greyTextColor;
+	}
+}
+
+//style for bottom-nav
+.bottom-nav{
+	margin-top: 85px;
+	padding: 3% 5%;
+	background: $greyTextColor;
+	text-align: center;
+	ul{		
+		margin: 0 auto;
+		padding: 0;
+		text-transform: uppercase;
+		li{
+			display: inline-block;
+			padding: 0 1%;
+			a{
+				color: #fff !important;
+				font-weight: 700;
+			}
+			a:hover{
+				text-decoration: none !important;
+				color: $darkGreen !important;
+				font-weight: 700;
+			}			
+		}		
+	}
+}

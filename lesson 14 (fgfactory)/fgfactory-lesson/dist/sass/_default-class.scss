@@ -1,0 +1,99 @@
+body{
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	color: $standartFontColor;
+	h3{
+		font-size: 50px;
+		text-transform: uppercase;
+		margin:30px 0;
+	}
+	ul{
+		li{
+			a{
+				text-decoration: none;
+			}
+			a:hover{
+				padding: 0 3px;
+				border-left: 2px solid #fff;
+				background: rgba(255,255,255, 0.2);
+			}
+		}		
+	}
+}
+.container-fluid{
+	padding: 0 60px;
+}
+.row{
+	display: flex;
+}
+
+.col{
+	display: flex;
+	position: relative;
+	&.m6{
+		width: 50%;
+	}
+	&.m12{
+		width: 100%;
+		p{
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}
+
+.button{
+	width: 235px;
+	height: 56px;
+	border: 2px solid #fff;
+	border-radius: 6px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	color: $standartFontColor;
+	text-decoration: none;
+	margin-top:68px;
+	&:hover{
+		background-color: $standartFontColor;
+		color: $standartHover;
+	}
+}
+
+.main-content{
+	h3{
+		font-size: 40px;
+		text-transform: uppercase;
+		margin:30px 0 0 70px;
+	}
+	h4{
+		font-size:22px;
+		text-transform: uppercase;
+		margin: 37px 0 40px 70px;
+	}
+	p{
+		font-size: 14px !important;
+		text-align: inherit !important;
+		margin: 0 0 0 70px;
+		line-height: 1.5;
+	}
+	.button{
+		margin-left: 70px ;
+	}
+}
+.marginLeft{
+	h3{
+		margin:30px 0 0 100px;
+	}
+	h4{
+		margin: 37px 0 40px 100px;
+	}
+	p{
+		margin: 0 0 0 100px;
+	}
+	.button{
+		margin-left: 100px ;
+	}
+}
+
+//footer

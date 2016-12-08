@@ -1,0 +1,127 @@
+// standart style for before and after
+%styleForPseudoElement{
+	display: inline-block;
+	content: "";
+}
+
+%indents70{
+	padding:70px 0;
+}
+// vertical-align
+.vertical-align{
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&::before{
+		@extend %styleForPseudoElement;
+		height: 100%;
+		vertical-align: middle;
+		margin-left: -4px;
+	}
+}
+
+// stadart title style
+.title{
+	padding-bottom: 45px;
+	text-align: center;
+	font-size: 2.143em;
+	span{		
+		color: $greyTextColor;
+		text-align: center;
+	}
+}
+
+//standart ul style
+ul{
+	list-style: none;
+	a{
+		color:$greyTextColor;
+		font-weight: 700;
+	}
+	a:hover{
+		text-decoration: none;
+		color: $darkGreen;
+		font-weight: 700;
+	}
+}
+
+//standart text color class
+.color-green{
+	color: $darkGreen !important;
+}
+
+//standart bg
+.bg-grey{
+	background: $lightGrayBg !important;
+}
+
+p{
+	color: $greyTextColor;
+	line-height: 1.7;
+	text-align: justify;
+	margin: 0 auto;
+}
+
+//standart btn
+.button{
+	display: inline-block;
+	border-radius: 30px;
+	font-size: 1.28em;
+	text-transform: uppercase;
+	&.big-btn{
+		padding: 20px 40px;
+	}
+	&.small-btn{
+		padding: 10px 20px;
+	}
+	&.light-green{
+		background: $btnLightGreen;
+		color: $btnGreyColor;
+	}
+	&.dark-green{
+		background: $btnDarkGreen;
+		color: $btnWhiteColor;
+	}
+	&:hover{
+		text-decoration: none;
+		text-shadow: 1px 1px 1px, 0 0 0.1em black;
+    	color: white;
+	}
+}
+
+.dotted{
+	text-align: center;
+	padding: 30px 0;
+	span{
+		display: inline-block;
+		width: 9px;
+		height: 9px;
+		background: $lightGreen;
+		margin: 0 5px;
+		border-radius: 50%;
+	}
+}
+
+.empty-dotted{
+	text-align: center;
+	padding: 40px 0 10px 0;
+	span{
+		display: inline-block;
+		width: 9px;
+		height: 9px;
+		margin: 0 5px;
+		border-radius: 50%;
+		border: 2px solid $lightGreen;
+	}
+}
+
+//leftM
+.leftM{
+	margin-left: -30px !important;
+}
+
+//rightM
+.rightM{
+	margin-right: -30px !important;
+}

@@ -1,0 +1,285 @@
+// custom var
+@import "custom";
+
+// fonts 
+@import "fonts";
+
+// reset 
+@import "reset";
+
+// default-class 
+@import "default-class";
+
+// layout 
+@import "layout";
+
+//style for development block
+.development{
+  .development-img{
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .development-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+//art block
+.art-production{
+  .art-img{
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .art-content{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $standartHover;
+  }
+}
+//cross block
+.cross{
+  .cross-img{
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .cross-content{
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $bgGrey;
+  }
+  .button{
+    &:hover{
+      color: $bgGrey !important;
+    }
+  }
+}
+
+//smart block
+.smart{
+  .smart-img{
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .smart-content{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $bgPurple;
+  }
+  .button{
+    &:hover{
+      color: $bgPurple !important;
+    }
+  }
+}
+//about block
+.about{
+  .about-img{
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .about-content{
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $bgLightGrey;
+    h3{
+      color: $greyFont !important;
+      margin-bottom: 65px;
+    }
+    p{
+      color: $lightBlackFont;
+    }
+    p + p{
+      margin-top: 40px;
+    }
+  }
+}
+
+//dustin
+.dustin{
+  h4{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+//footer
+.footer-content{
+  background: $footerBg;
+  padding: 74px 0;
+  display: flex;
+  justify-content: space-between;
+  .button{
+    width: 300px;
+    height: 56px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    color: $standartFontColor;
+    text-decoration: none;
+    margin-top: inherit;
+    &:hover{
+      background-color: $standartFontColor;
+      color: $footerBg;
+    }
+  }
+  .footer-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 60px;
+  }
+  .web{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 60px;
+  }
+  ul{
+    margin: 0 0;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    li{
+      a{
+        display: inline-block;
+        margin: 0 4px;
+      }
+      .behance{
+        width: 32px;
+        height: 20px;
+        background: url("../img/sprite-ic.png");
+        background-position: -0px -20px;
+        &:hover{
+          width: 32px;
+          height: 20px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -0px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+      .dribbble{
+        width: 26px;
+        height: 26px;
+        background: url("../img/sprite-ic.png");
+        background-position: -0px -66px;
+        &:hover{
+          width: 26px;
+          height: 26px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -40px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+      .facebook{
+        width: 10px;
+        height: 22px;
+        background: url("../img/sprite-ic.png");
+        background-position: -10px -266px;
+        &:hover{
+          width: 10px;
+          height: 22px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -266px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+      .linkedin{
+        width: 24px;
+        height: 23px;
+        background: url("../img/sprite-ic.png");
+        background-position: -0px -243px;
+        &:hover{
+          width: 24px;
+          height: 23px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -220px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+      .instagram{
+        width: 24px;
+        height: 24px;
+        background: url("../img/sprite-ic.png");
+        background-position: -0px -196px;
+        &:hover{
+          width: 24px;
+          height: 24px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -172px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+      .twitter{
+        width: 26px;
+        height: 21px;
+        background: url("../img/sprite-ic.png");
+        background-position: -0px -113px;
+        &:hover{
+          width: 26px;
+          height: 21px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -92px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+      .youtube{
+        width: 26px;
+        height: 19px;
+        background: url("../img/sprite-ic.png");
+        background-position: -0px -153px;
+        &:hover{
+          width: 26px;
+          height: 19px;
+          background: url("../img/sprite-ic.png");
+          background-position: -0px -134px;
+          padding: 0;
+          border-left: inherit;
+        }
+      }
+    }
+  }
+}
