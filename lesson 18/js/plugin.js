@@ -94,13 +94,10 @@
 // console.log(newStr);
 
 //Задание 6
-// var row = 15,
-//     i = 0,
-//     number = 0;
-//
-// while(i++ < row){
-//     number = i % 3;
-//     if(number == 0){
-//         console.log(i)
-//     }
-// }
+for (var i = 0; i <= 15; i++) {
+
+    if (i % 2) {
+        console.log(i);
+    }
+
+}
