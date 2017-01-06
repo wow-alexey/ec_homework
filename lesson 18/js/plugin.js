@@ -67,8 +67,8 @@
 //     i = 0,
 //     comma= ' ',
 //     newStr;
-//
-// var xStr = 'Стичтаем до ' + x + 'и: ';
+//// var xStr = 'Стичтаем до ' + x + 'и: ';
+
 // while (i++ < x){
 //     comma += i + ', ';
 // }
@@ -94,10 +94,10 @@
 // console.log(newStr);
 
 //Задание 6
-for (var i = 0; i <= 15; i++) {
-
-    if (i % 2) {
-        console.log(i);
-    }
-
-}
+// for (var i = 0; i <= 15; i++) {
+//
+//     if (i % 2) {
+//         console.log(i);
+//     }
+//
+// }
