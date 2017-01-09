@@ -25,11 +25,9 @@ factorial(10);
 
 //Задача 3
 function string(smth) {
-	smth = smth.split('');
-	smth = smth.reverse();
-	smth = smth.join('');
-	console.log(smth);
-	return smth;
+	smth = smth.split('') .reverse() .join('');
+    console.log(smth);
+    return smth; 
 }
 string('test');
 
@@ -44,8 +42,7 @@ function changeStr(str, func){
 }
 
 function handler(letter) {
-	var n = letter.charCodeAt();
-	return n + ' ';
+	return letter.charCodeAt() + ' ';
 }
 var res = changeStr('hello', handler);
 console.log(res);
