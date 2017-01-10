@@ -255,6 +255,6 @@ function date(year, month, day){
   		day: 'numeric',
 	}
 	var res = nowDate - specialDate;
-	return Math.round(res/1000/60/60/24/7) + ' недели прошло с ' + userDate.toLocaleString('ru', options);
+	return Math.round(res/604800000) + ' недели прошло с ' + userDate.toLocaleString('ru', options);
 }
 console.log(date(2016, 0, 1));
