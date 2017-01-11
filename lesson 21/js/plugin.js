@@ -76,3 +76,81 @@ console.log(numerator.value);
 //	Вызывают метод у первогоы объекта - получают Abraham.
 //	Вызывают метод у второго объекта - получают John.
 
+
+
+
+
+
+
+//this Задачи №2:
+
+//Задача 1
+//	getList() - выведет undefined так как не указанно в контексте чего вызывается этот метод;
+//	users.getList = getList - выведет тело функции так как не стоят скобки после getList:
+//	users.getList() - в объект users добавляется функция/метод getList() и выполняется, то-есть выдает ['Abraham', 'James', 'John', 'Steven']; 
+//	getList.call(users) - выведет ['Abraham', 'James', 'John', 'Steven'], так как в контексте users вызыввается функция getList;
+
+//Задача 2
+const goods = {
+	price: 15,
+	amount: 40,
+	getPrice: function function_name () {
+		return this.price * this.amount;
+	}
+}
+console.log(goods.getPrice())
+
+//Задача 3
+const goods2 = {
+	price: 15,
+	amount: 40,
+	getPrice: function function_name () {
+		return this.price * this.amount;
+	}
+},
+details = {
+	price: 23,
+	amount: 50,
+}
+console.log(goods2.getPrice.call(details));
+
+//Задача 4
+let sizes = {
+	width: 5,
+	height: 10,
+}
+getSquare = function (){
+	return this.width * this.height;
+}
+console.log(getSquare.call(sizes));
+
+//Задача 5
+let numbers = [4, 12, 0, 10, -2, 4];
+console.log(Math.min.apply(null, numbers));
+
+//Задача 6
+const element = {
+	height: '15px',
+	marginTop: '5px',
+	marginBottom: '5px',
+	getFullHeight: function () {
+		return parseInt(this.height) + parseInt(this.marginTop) + parseInt(this.marginBottom);
+	}
+}
+const block = {
+	height: '5px',
+	marginTop: '3px',
+	marginBottom: '3px',
+}
+console.log(element.getFullHeight());
+console.log(element.getFullHeight.call(block));
+
+//Задача 7
+let element1 = {
+	height: 25,
+	getHeight: function (){
+		return this.height;
+	}
+};
+let getElementHeight = element1.getHeight.bind(element1);
+console.log(getElementHeight());
