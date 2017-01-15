@@ -154,3 +154,95 @@ let element1 = {
 };
 let getElementHeight = element1.getHeight.bind(element1);
 console.log(getElementHeight());
+
+
+
+
+
+//Лексическое окружение: задачи:
+
+/////////////////////////////////////////Задача 1
+// console.log(getBigName(userName));
+// function getBigName(name) {
+// 	name = name + '';
+// 	return name.toUpperCase();
+// }
+// var userName = 'Ivan';
+
+//	Такой код выдаст UNDEFINED так как в его лексическом окружении еще нет какого-то конкретного "name";
+
+/////////////////////////////////////////Задача 2
+// function test () {
+// 	var name = 'Vasiliy';
+// 	return getBigName(userName);
+// }
+// function getBigName (name) {
+// 	name = name + "";
+// 	return name.toUpperCase();
+// }
+
+// var userName = 'Ivan';
+// console.log(test());
+
+// Вернет IVAN так как функция test возвращает(return) функцию getBigName;
+
+/////////////////////////////////////////Задача 3
+// var food = 'cucumber';
+
+// (function () {
+// 	var food = 'bread';
+// 	getFood();
+// })();
+
+// function getFood() {
+// 	console.log(food);
+// }
+
+// Вернет cucumber в приоритете переменная food которая не находится в функции;
+
+
+//Замыкания. Задачи:
+/////////////////////////////////////////Задача 1
+// var dollar,
+// 	getDollar;
+// (function(){
+// 	var dollar = 0;
+// 	getDollar = function () {
+// 		return dollar;
+// 	}	
+// 	}());	
+// dollar = 30;
+// console.log(getDollar());
+
+//	Вернет 0 так как функция getDollar была создана в том окружении  котром переменная dollar = 0;
+
+
+/////////////////////////////////////////Задача 2
+// var greet = 'Hello';
+// (function(){
+// 	var text = " World";
+// 	console.log(greet + text);
+// }());
+// console.log(greet + text);
+
+//	Внутри функции выдаст Hello World так как перемнную greet, функция(анонимная самовызывающаяся функция) 
+//	позаимствовала извне. А во втором вызове выдаст ошибку 
+//	так как функция в которой есть text является анонимной. 
+
+/////////////////////////////////////////Задача 3
+var minus = function (valueOne) {
+	var firstNumber = valueOne || 0;
+	return function (valueTwo) {
+		var secondNumber = valueTwo || 0;
+		console.log(firstNumber - secondNumber);
+	}
+}
+minus(10)();
+
+/////////////////////////////////////////Задача 4
+
+
+/////////////////////////////////////////Задача 5
+
+
+/////////////////////////////////////////Задача 6
