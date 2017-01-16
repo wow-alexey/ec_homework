@@ -240,9 +240,93 @@ var minus = function (valueOne) {
 minus(10)();
 
 /////////////////////////////////////////Задача 4
+function muliplyMaker (value) {
+	var val = value;
+	return function (multi) {
+		var res = val * multi;
+		return val = res;
+	}
+}
+var multiply = muliplyMaker(2);
 
+console.log(multiply(2));
+console.log(multiply(1));
+console.log(multiply(3));
+console.log(multiply(10));
 
 /////////////////////////////////////////Задача 5
+var module = (function () {
 
+    var string = '';
+
+    function setStr (value) {
+        if(value !== isNaN(value)) 
+        	return string = value.toString();
+    }
+    function getStr () {
+    	return string; 
+    }
+    function getLength () {
+    	return string.length;
+    }
+    function getReverse () {
+    	return string.split('').reverse().join('');
+    }
+
+    return {
+    	setStr: setStr,
+    	getStr: getStr,
+    	getLength: getLength,
+    	getReverse: getReverse,
+    }
+
+}());
+console.log(module.setStr('abcde'));
+console.log(module.getStr());
+console.log(module.getLength());
+console.log(module.getReverse());
 
 /////////////////////////////////////////Задача 6
+var calulate = (function () {
+	var main = 0;
+	function setValue(value) {
+        return  main = value;
+    }
+    function plus(value) {
+        return main += value;
+    }
+    function minus (value) {
+    	return main -= value;
+    }
+    function multiply (value) {
+    	return main *=value;
+    }
+    function division (value) {
+    	return main /=value;
+    }
+    function pow (value) {
+        return main = Math.pow(main, value);
+    }
+    function getResult() {
+        return main.toFixed(2);
+    }
+
+	return {
+		setValue: setValue,
+		plus: plus,
+		minus: minus,
+		multiply: multiply,
+		division: division,
+		pow: pow,
+		getResult: getResult
+	}
+
+}());
+console.log(calulate.setValue(1));
+console.log(calulate.plus(5));
+console.log(calulate.minus(2));
+console.log(calulate.multiply(3));
+console.log(calulate.division(2));
+console.log(calulate.pow(2));
+console.log(calulate.getResult(1));
+// Не могу понять  как можно сделать вызов цепочкой не используя this.
