@@ -81,9 +81,104 @@ var earth = new PlanetWithSatellite('Earth', 'Moon')
 console.log(earth.getName());
 
 // Задача 2
+function Building (name, floor) {
+	this.name = name;
+	this.floor = floor;
+	this.getFloorNumber = function () {
+		return this.floor;
+	}
+	this.setFloorNumber = function (value) {
+		this.floor = value;
+		return this.floor
+	}
+}
+
+var home = new Building('myHome', 42);
+console.log(home);
+console.log(home.getFloorNumber());
+console.log(home.setFloorNumber(33));
+
+function Hostel (name, floor, flats){
+	this.flats = flats;
+	Building.apply(this, arguments);
+	this.getFloorNumber = function () {
+		return	{floor: this.floor,
+				 NumberOfFlats: this.floor * this.flats};
+
+	}	
+};
+
+var hostel = new Hostel('Hostel_of_KHIF', 5, 9);
+console.log(hostel);
+console.log(hostel.getFloorNumber());
+
+function ShoppingMall (name, floor, stores){
+	this.stores = stores;
+	Building.apply(this, arguments);
+	this.getFloorNumber = function () {
+		return	{floor: this.floor,
+				 NumberOfStores: this.floor * this.stores};
+
+	}	
+
+};
+
+var shoppingMall = new ShoppingMall('Karavan', 3, 24);
+console.log(shoppingMall);
+console.log(shoppingMall.getFloorNumber());
 
 // Задача 3
+function Furnirure (name, price) {
+	this.name = name;
+	this.price = price;
+}
+Furnirure.prototype.getInfo = function () {
+	// console.log(this)
+	// var infoObj = {};
+	// for (var key in this){
+	// 	infoObj[key] = this[key];
+	// 	console.log(key)
+	// }
+	// return infoObj
+	return {name: this.name, 
+			price: this.price};
+}
+
+// function OfficeFurniture(name, price) {
+// 	Furnirure.apply(this, arguments);
+// 	this.have_a_shredder = true;
+// }
+// OfficeFurniture.prototype = Object.create(Furnirure.prototype);
+
+
+var officeFurniture = new Furnirure('ComputerTable', 444.9);
+officeFurniture.have_a_shredder = true;
+officeFurniture.getInfo = function(){
+	var originalMethod = Furnirure.prototype.getInfo.call(this);
+	originalMethod.have_a_shredder = true;
+	console.log(originalMethod);
+}
+
+var homeFurniture = new Furnirure('Chair', 223.9);
+homeFurniture.have_a_wheels = true;
+homeFurniture.getInfo = function(){
+	var originalMethod = Furnirure.prototype.getInfo.call(this);
+	originalMethod.have_a_wheels = true;
+	console.log(originalMethod);
+}
+
+console.log(officeFurniture.getInfo());
+console.log(homeFurniture.getInfo());
 
 // Задача 4
+// function User (name, registration) {
+// 	this.name = name;
+// 	this.registration - registration;
+// }
+// User.prototype.getInfo = function () {
+// 	return {name: this.name, 
+// 			registration: this.registration};
+// }
+
 
 // Задача 5
