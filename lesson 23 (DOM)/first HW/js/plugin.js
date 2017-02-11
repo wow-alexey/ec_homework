@@ -8,6 +8,10 @@ console.log(two);
 var three = document.body.children;
 console.log(three);
 
-var fourA = document.body.firstElementChild.children;
+var fourA = document.body.firstElementChild;
 console.log(fourA);
 
+var fourB =  fourA.children;
+for (var i = 1, max = fourB.length-1; i < max; i++){
+	console.log(fourB[i]);
+}
