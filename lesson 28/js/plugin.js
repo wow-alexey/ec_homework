@@ -1,13 +1,5 @@
 ;(function($){
-    // $.fn.myPlagin = function () {
-    //    this.css({
-    //         'opacity': '0.3',
-    //         'transition': '2s'
-    //    }); 
-    //    return this;
-    // }
 
-    // $('p').myPlagin()
     $(".hide").click(function () {
         $('p').css({'opacity' : '0', 
                     'transition':'3s',
@@ -25,14 +17,17 @@
 
 
 //************************************************************************************************************//
-(function( $ ){
+;(function( $ ){
 
   $.fn.myPlugin = function() {
-    this.click(function(){
-        $(this).css({'opacity' : '1', 
-                    'transition':'3s',
-                    'fontSize':'16px'});
+
+    $(this).click(function () {
+       $(this).slideUp(); 
+       $(this).css({ 'opacity': '0',                    
+                    'transition': 'opacity 0.4s ease-in-out'});
     });
+
   };
+ 
   $('p').myPlugin();
 })( jQuery ); //тут я хотел чтобы при клике на параграф, он исчезал - не иогу понять где ошибка
