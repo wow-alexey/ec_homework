@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your tasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--HEADER START-->
+<header class="header">
+    <div class="container flex-container">
+        <button class="add-task">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="user-nav flex-container">
+            <a href="#"><i class="icon icon-user"></i></a>
+            <a href="login.html"><i class="icon icon-logout"></i></a>
+        </nav>
+    </div>
+</header>
+<!--HEADER END-->
+
+<!--MAIN START-->
+<main>
+    <div class="toggle-task-type">
+        <div class="container">
+            <nav class="toggle-task-list flex-container">
+                <a href="#active-task" class="active">Активные задачи</a>
+                <a href="#all-task">Все задачи</a>
+            </nav>
+        </div>
+    </div>
+    <div class="task-content active" id="active-task">
+        <div class="container">
+            <div class="today-day">
+                <span class="day">09</span>
+                <span class="month">фев</span>
+            </div>
+            <div class="all-task-wrap">
+                <!--ONE TASK START-->
+                <div class="task open">
+                    <div class="to-do-time">9:00</div>
+                    <div class="task-header flex-container">
+                        <span class="icon icon-arrow"></span>
+                        <div class="short-task-text">Какой-то таск</div>
+                        <span class="icon icon-cancel"></span>
+                    </div>
+                    <div class="task-content-wrap">
+                        <div class="time-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-time"></span>
+                            </div>
+                            <span class="time">9:00</span>
+                            <div class="task-icon">
+                                <span class="icon icon-bell"></span>
+                            </div>
+                        </div>
+                        <div class="task-text-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-list"></span>
+                            </div>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                            </div>
+                        </div>
+                        <div class="task-check-row">
+                            <label class = "checkBox ">
+                                <input type="checkbox" name="check">
+                                <span class = "label-text to-do">Задача еще не выполнена</span>
+                            </label>
+                            <!--<span class="to-do">Задача еще не выполнена</span>-->
+                        </div>
+                        <div class="task-edit-row">
+
+                        </div>
+                    </div>
+                </div>
+                <!--ONE TASK CLOSE-->
+
+                <!--TWO TASK START-->
+                <div class="task warning">
+                    <div class="to-do-time">9:00</div>
+                    <div class="task-header flex-container">
+                        <span class="icon icon-arrow"></span>
+                        <div class="short-task-text">Какой-то таск</div>
+                        <span class="icon icon-cancel"></span>
+                    </div>
+                    <div class="task-content-wrap">
+                        <div class="time-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-time"></span>
+                            </div>
+                            <span class="time">9:00</span>
+                            <div class="task-icon">
+                                <span class="icon icon-bell"></span>
+                            </div>
+                        </div>
+                        <div class="task-text-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-list"></span>
+                            </div>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                            </div>
+                        </div>
+                        <div class="task-check-row">
+                            <label class = "checkBox ">
+                                <input type="checkbox" name="check">
+                                <span class = "label-text to-do">Задача еще не выполнена</span>
+                            </label>
+                            <!--<span class="to-do">Задача еще не выполнена</span>-->
+                        </div>
+                        <div class="task-edit-row"></div>
+                    </div>
+                </div>
+                <!--TWO TASK CLOSE-->
+
+                <!--THREE TASK START-->
+                <div class="task success">
+                    <div class="to-do-time">9:00</div>
+                    <div class="task-header flex-container">
+                        <span class="icon icon-arrow"></span>
+                        <div class="short-task-text">Какой-то таск</div>
+                        <span class="icon icon-cancel"></span>
+                    </div>
+                    <div class="task-content-wrap">
+                        <div class="time-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-time"></span>
+                            </div>
+                            <span class="time">9:00</span>
+                            <div class="task-icon">
+                                <span class="icon icon-bell"></span>
+                            </div>
+                        </div>
+                        <div class="task-text-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-list"></span>
+                            </div>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                            </div>
+                        </div>
+                        <div class="task-check-row">
+                            <label class = "checkBox ">
+                                <input type="checkbox" name="check" checked>
+                                <span class = "label-text to-do">Я выполнил задачу</span>
+                            </label>
+                            <!--<span class="to-do">Задача еще не выполнена</span>-->
+                        </div>
+                        <div class="task-edit-row"></div>
+                    </div>
+                </div>
+                <!--THREE TASK CLOSE-->
+            </div>
+        </div>
+    </div>
+    <div class="task-content" id="all-task">
+        <div class="container">
+            <div class="today-day">
+                <span class="day">09</span>
+                <span class="month">фев</span>
+            </div>
+            <div class="all-task-wrap">
+                <!--ONE TASK START-->
+                <div class="task open">
+                    <div class="to-do-time">9:00</div>
+                    <div class="task-header flex-container">
+                        <span class="icon icon-arrow"></span>
+                        <div class="short-task-text">Какой-то таск</div>
+                        <span class="icon icon-cancel"></span>
+                    </div>
+                    <div class="task-content-wrap">
+                        <div class="time-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-time"></span>
+                            </div>
+                            <span class="time">9:00</span>
+                            <div class="task-icon">
+                                <span class="icon icon-bell"></span>
+                            </div>
+                        </div>
+                        <div class="task-text-row flex-container">
+                            <div class="task-icon">
+                                <span class="icon icon-list"></span>
+                            </div>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                            </div>
+                        </div>
+                        <div class="task-check-row">
+                            <label class = "checkBox">
+                                <input type="checkbox" name="check">
+                                <span class = "label-text">Задача еще не выполнена</span>
+                            </label>
+                        </div>
+                        <div class="task-edit-row">
+
+                        </div>
+                    </div>
+                </div>
+                <!--ONE TASK CLOSE-->
+
+            </div>
+        </div>
+    </div>
+</main>
+<!--MAIN END-->
+
+<!--jQuery-->
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+<script src="js/interface.js"></script>
+
+</body>
+</html>

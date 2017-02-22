@@ -1,0 +1,332 @@
+@import "custom-variables";
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
+
+.container {
+  max-width: $containerWidth;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background: $generalColor;
+  padding: 3.5em 0;
+  height: 10em;
+  .flex-container {
+    justify-content: space-between;
+  }
+}
+
+.add-task {
+  font-size: 1em;
+  width: 6em;
+  height: 6em;
+  background: $newTaskBg;
+  border-radius: 50%;
+  transform: translateY(55%);
+  span {
+    display: inline-block;
+    width: 3em;
+    height: .4em;
+    background: #fff;
+    position: absolute;
+    top: calc(50% - .2em);
+    margin-left: -1.5em;
+    transform: rotate(90deg);
+    & + span {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.user-nav {
+  font-size: 3em;
+  color: #fff;
+  a {
+    & + a {
+      margin-left: 1.2em;
+    }
+  }
+}
+
+.toggle-task-type {
+  padding: 5em 0;
+  a {
+    color: #bebebe;
+    font-size: 1.8em;
+    font-family: 'sf_ui_textsemibold';
+    &.active {
+      color: $generalColor;
+    }
+    & + a {
+      margin-left: .3em;
+      &:before {
+        content: '/';
+        display: inline-block;
+        margin-right: .3em;
+        color: #bebebe;
+      }
+    }
+  }
+}
+
+.today-day {
+  background: $generalColor;
+  padding: 1em 2em;
+  color: #fff;
+  .day {
+    font-size: 3.6em;
+    font-family: 'sf_ui_displaybold';
+  }
+  .month {
+    font-size: 1.8em;
+  }
+}
+
+.all-task-wrap {
+  padding: 4em 0;
+}
+
+.task-content {
+  overflow: auto;
+  height: calc(100vh - 218px);
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+.task {
+  width: 100%;
+  position: relative;
+  padding-left: 5.4em;
+  max-width: calc(600px - 5.4em);
+  &.open {
+    .task-content-wrap {
+      display: block;
+    }
+    .task-header {
+      border-radius: 1em 1em 0 0;
+    }
+  }
+  &.warning {
+    .task-header {
+      background: $warningBg;
+    }
+  }
+  &.success {
+    .task-header {
+      background: $successBg;
+    }
+  }
+  & + .task {
+    margin-top: 4em;
+  }
+  .task-header {
+    padding: 1.5em;
+    background: $taskColor;
+    border-radius: 1em;
+    color: #fff;
+    font-family: 'sf_ui_textlight';
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 16.17px 4.83px rgba(0, 2, 3, 0.08);
+    .short-task-text {
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.4em;
+    }
+    .icon-arrow {
+      font-size: .6em;
+    }
+    .icon-cancel {
+      font-size: 2em;
+      margin-top: -8px;
+    }
+  }
+  .task-content-wrap {
+    display: none;
+    padding: 1.5em;
+    border-radius: 0 0 1em 1em;
+    background: #ffffff;
+    color: #404040;
+    font-family: 'sf_ui_textlight';
+    font-size: 1.4em;
+    line-height: 1.3;
+    box-shadow: 0 3px 16.17px 4.83px rgba(0, 2, 3, 0.08);
+    & > * {
+      & + * {
+        margin-top: 1em;
+      }
+    }
+    .time-row {
+      .time {
+        width: 90%;
+        padding-left: 5px;
+        align-self: center;
+      }
+    }
+    .task-icon {
+      font-size: 1.43em;
+      width: 20px;
+    }
+    .task-text-row {
+      .text {
+        width: 90%;
+        padding-left: 5px;
+
+      }
+    }
+    .task-check-row{
+      .checkBox {
+        cursor: pointer;
+        display: block;
+        input[type='checkbox'] {
+          display: none;
+          + .label-text:before {
+            content: '\f1db';
+            font-family: "FontAwesome";
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            width: 1em;
+            margin-right: 15px;
+            transition: 1s;
+            color: #f65719;
+
+          }
+          &:checked + .label-text:before {
+            content: "\f05d";
+            color: $successBg;
+          }
+        }
+      }
+    }
+  }
+}
+
+.to-do-time {
+  width: 3.3333em;
+  height: 3.3333em;
+  font-size: 1.2em;
+  background: $generalColor;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+//LOGIN STYLES
+.login-body {
+  background-image: url(../../app/img/login-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .form {
+    background: #fff;
+    width: 290px;
+    height: 330px;
+    border-radius: 9px;
+    box-shadow: 0 3px 16.17px 4.83px rgba(0, 2, 3, 0.08);
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    text-align: center;
+    .e-mail {
+      margin-top: 47px;
+      :focus {
+        border-bottom: 1px $generalColor solid;
+
+      }
+      input {
+        height: 50px;
+        width: 190px;
+        border-bottom: 1px #9f9f9f solid;
+        font-size: 1.8em;
+        color: #9f9f9f;
+        margin-left: 27px;
+      }
+      span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url("../../app/img/input-sprite.png");
+        background-position: -0px -24px;
+
+      }
+    }
+    .password {
+      margin-top: 12px;
+      :focus {
+        border-bottom: 1px $generalColor solid;
+      }
+      input {
+        height: 50px;
+        width: 190px;
+        border-bottom: 1px #9f9f9f solid;
+        font-size: 1.8em;
+        color: #9f9f9f;
+        padding: 0;
+        margin-left: 27px;
+      }
+      span {
+        display: inline-block;
+        width: 18px;
+        height: 23px;
+        background: url("../../app/img/input-sprite.png");
+        background-position: -0px -71px;
+      }
+    }
+    input[type="submit"] {
+      border-radius: 9px;
+      width: 245px;
+      height: 40px;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.8em;
+      background: $generalColor;
+      margin-top: 40px;
+      margin-right: 0px;
+    }
+    .checkBox {
+      cursor: pointer;
+      display: block;
+      color: #9f9f9f;
+      font-size: 1.4em;
+      margin-top: 35px;
+      input[type='checkbox'] {
+        display: none;
+        + .label-text:before {
+          content: '\f096';
+          font-family: "FontAwesome";
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          width: 1em;
+          margin-right: 15px;
+          transition: 1s;
+
+        }
+        &:checked + .label-text:before {
+          content: "\f14a";
+          color: $generalColor;
+        }
+      }
+    }
+  }
+}

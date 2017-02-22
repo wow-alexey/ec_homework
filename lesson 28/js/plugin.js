@@ -25,9 +25,32 @@
        $(this).slideUp(); 
        $(this).css({ 'opacity': '0',                    
                     'transition': 'opacity 0.4s ease-in-out'});
-    });
+        });
 
   };
- 
+    
+    $('.reset').click(function () {
+        $('p').slideDown();
+        $('p').css({'opacity':'1',
+                    'display':'block',
+                    'transition': 'opacity 0.4s ease-in-out',
+        });
+    })
   $('p').myPlugin();
-})( jQuery ); //тут я хотел чтобы при клике на параграф, он исчезал - не иогу понять где ошибка
+})( jQuery ); 
+
+//************************************************************************************************************//
+;(function( $ ){
+
+  $.fn.myPlugin = function() {
+    var smth = $(this);
+    $('.toggle').click(function () {
+        smth.slideToggle();
+        smth.fadeToggle();
+    })
+
+  };
+    
+   
+  $('p').myPlugin();
+})( jQuery ); 

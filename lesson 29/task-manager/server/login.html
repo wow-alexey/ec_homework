@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="login-form">
+        <form>
+            <div class="input-group flex-container">
+                <label for="login" class="icon icon-account_circle-grey"></label>
+                <input type="text" name="login" id="login" placeholder="Email">
+            </div>
+            <div class="input-group flex-container">
+                <label for="password" class="icon icon-lock-grey"></label>
+                <input type="password" name="password" id="password" placeholder="Пароль">
+            </div>
+            <div class="input-group">
+                <button type="submit" class="login-btn" >Войти</button>
+            </div>
+            <div class="input-group checkSave">
+                <input type="checkbox" name="saveMe" id="saveMe">
+                <label for="saveMe">Сохранить пароль</label>
+            </div>
+        </form>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+    <script>
+        $(".login-btn").login({
+            errorClass:'wrong',
+        });
+    </script>
+</body>
+</html>
