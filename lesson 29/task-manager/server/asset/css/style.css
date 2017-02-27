@@ -243,7 +243,9 @@ button {
 .header {
   background: #00a2f4;
   padding: 3.5em 0;
-  height: 10em; }
+  height: 10em;
+  position: relative;
+  z-index: 999999; }
   .header .flex-container {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -259,7 +261,15 @@ button {
           border-radius: 50%;
   -webkit-transform: translateY(55%);
       -ms-transform: translateY(55%);
-          transform: translateY(55%); }
+          transform: translateY(55%);
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear; }
+  .add-task.open {
+    -webkit-transform: translateY(55%) rotate(45deg);
+        -ms-transform: translateY(55%) rotate(45deg);
+            transform: translateY(55%) rotate(45deg); }
   .add-task span {
     display: inline-block;
     width: 3em;
@@ -310,7 +320,17 @@ button {
     font-size: 1.8em; }
 
 .all-task-wrap {
-  padding: 4em 0; }
+  padding: 4em 0;
+  position: relative; }
+  .all-task-wrap:before {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 2px dashed;
+    top: 4em;
+    bottom: 0;
+    left: 1.7em;
+    color: #00a2f4; }
 
 .task-content {
   overflow: auto;
@@ -354,18 +374,18 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-shadow: 0 3px 16.17px 4.83px rgba(0, 2, 3, 0.08);
-            box-shadow: 0 3px 16.17px 4.83px rgba(0, 2, 3, 0.08); }
+            box-shadow: 0 3px 16.17px 4.83px rgba(0, 2, 3, 0.08);
+    height: 70px; }
     .task .task-header .short-task-text {
       width: 80%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 1.4em; }
+      font-size: 3em; }
     .task .task-header .icon-arrow {
-      font-size: .6em; }
+      font-size: 1em; }
     .task .task-header .icon-cancel {
-      font-size: 2em;
-      margin-top: -8px; }
+      font-size: 2em; }
   .task .task-content-wrap {
     display: none;
     padding: 1.5em;
@@ -415,6 +435,34 @@ button {
         .task .task-content-wrap .task-check-row .checkBox input[type='checkbox']:checked + .label-text:before {
           content: "\f05d";
           color: #7cbb00; }
+  .task .task-status {
+    position: absolute;
+    display: none;
+    width: 380px;
+    height: 100px;
+    right: -450px;
+    top: 0;
+    word-wrap: break-word;
+    margin-top: 10px; }
+    .task .task-status .icon-star {
+      font-size: 38.3px;
+      color: #7cbb00;
+      width: 42px;
+      height: 40px;
+      display: inline-block; }
+    .task .task-status .icon-warning {
+      font-size: 38.3px;
+      color: #ff5201;
+      width: 42px;
+      height: 40px; }
+    .task .task-status.fail .statusText {
+      font-size: 30px;
+      color: #ff5201;
+      padding: 5px 0 0 25px; }
+    .task .task-status.congrats .statusText {
+      font-size: 30px;
+      color: #7cbb00;
+      padding: 5px 0 0 25px; }
 
 .to-do-time {
   width: 3.3333em;
@@ -525,6 +573,120 @@ button {
         .login-body .form .checkBox input[type='checkbox']:checked + .label-text:before {
           content: "\f14a";
           color: #00a2f4; }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.83);
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear; }
+  .overlay.open {
+    z-index: 9999;
+    opacity: 1; }
+
+.edit-task {
+  background-color: #fff;
+  width: 100%;
+  padding: 5em 0;
+  min-height: 50vh;
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  -webkit-transform: translateY(100vh);
+      -ms-transform: translateY(100vh);
+          transform: translateY(100vh);
+  -webkit-transition: all .5s linear .2s;
+  transition: all .5s linear .2s; }
+  .edit-task.open {
+    z-index: 99999;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
+  .edit-task form .count-text {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    color: #9d9d9d;
+    visibility: hidden;
+    margin-top: 40px; }
+  .edit-task form .main-information {
+    display: block;
+    width: 710px; }
+    .edit-task form .main-information .categories {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .edit-task form .main-information .categories .inputs {
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .edit-task form .main-information .categories .inputs .icon-bell:before {
+          color: #3db7f4;
+          font-size: 25px;
+          margin-right: 10px; }
+        .edit-task form .main-information .categories .inputs span {
+          font-size: 16px;
+          margin-right: 7px; }
+      .edit-task form .main-information .categories .chose-category span {
+        font-size: 18px;
+        color: #9d9d9d;
+        margin-bottom: 25px; }
+    .edit-task form .main-information .hint {
+      display: block;
+      font-size: 12px;
+      color: #00a2f4;
+      margin-top: 25px;
+      visibility: hidden; }
+    .edit-task form .main-information textarea {
+      display: block;
+      width: 100%;
+      height: 67px;
+      border-bottom: 1px solid #9d9d9d;
+      color: #000;
+      font-size: 14px;
+      padding: 0; }
+      .edit-task form .main-information textarea:focus {
+        border-bottom: 2px solid #00a2f4; }
+  .edit-task form .send {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 55px; }
+    .edit-task form .send .edit-task-btn {
+      display: block;
+      float: right;
+      width: 290px;
+      height: 50px;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #00a2f4;
+      -webkit-border-radius: 9px;
+              border-radius: 9px; }
 
 .login-form {
   width: 100%;

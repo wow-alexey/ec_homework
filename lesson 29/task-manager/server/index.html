@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Your tasks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <!--HEADER START-->
@@ -16,7 +18,7 @@
         </button>
         <nav class="user-nav flex-container">
             <a href="#"><i class="icon icon-user"></i></a>
-            <a href="login.html"><i class="icon icon-logout"></i></a>
+            <a href="#" class="logout"><i class="icon icon-logout"></i></a>
         </nav>
     </div>
 </header>
@@ -62,13 +64,15 @@
                                 <span class="icon icon-list"></span>
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis
+                                cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente
+                                soluta ullam ut velit voluptate.
                             </div>
                         </div>
                         <div class="task-check-row">
-                            <label class = "checkBox ">
+                            <label class="checkBox ">
                                 <input type="checkbox" name="check">
-                                <span class = "label-text to-do">Задача еще не выполнена</span>
+                                <span class="label-text to-do">Задача еще не выполнена</span>
                             </label>
                             <!--<span class="to-do">Задача еще не выполнена</span>-->
                         </div>
@@ -76,7 +80,12 @@
 
                         </div>
                     </div>
+                    <div class="task-status congrats">
+                        <div class="icon icon-star"></div>
+                        <div class="statusText">Поздравляем!</br>Вы справились с задачей</div>
+                    </div>
                 </div>
+
                 <!--ONE TASK CLOSE-->
 
                 <!--TWO TASK START-->
@@ -102,18 +111,25 @@
                                 <span class="icon icon-list"></span>
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis
+                                cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente
+                                soluta ullam ut velit voluptate.
                             </div>
                         </div>
                         <div class="task-check-row">
-                            <label class = "checkBox ">
+                            <label class="checkBox ">
                                 <input type="checkbox" name="check">
-                                <span class = "label-text to-do">Задача еще не выполнена</span>
+                                <span class="label-text to-do">Задача еще не выполнена</span>
                             </label>
                             <!--<span class="to-do">Задача еще не выполнена</span>-->
                         </div>
                         <div class="task-edit-row"></div>
                     </div>
+                    <div class="task-status fail">
+                        <div class="icon icon-warning"></div>
+                        <div class="statusText">Вы не выполнили эту задачу</div>
+                    </div>
+
                 </div>
                 <!--TWO TASK CLOSE-->
 
@@ -140,17 +156,23 @@
                                 <span class="icon icon-list"></span>
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis
+                                cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente
+                                soluta ullam ut velit voluptate.
                             </div>
                         </div>
                         <div class="task-check-row">
-                            <label class = "checkBox ">
+                            <label class="checkBox ">
                                 <input type="checkbox" name="check" checked>
-                                <span class = "label-text to-do">Я выполнил задачу</span>
+                                <span class="label-text to-do">Я выполнил задачу</span>
                             </label>
                             <!--<span class="to-do">Задача еще не выполнена</span>-->
                         </div>
                         <div class="task-edit-row"></div>
+                    </div>
+                    <div class="task-status congrats">
+                        <div class="icon icon-star"></div>
+                        <div class="statusText">Поздравляем!</br>Вы справились с задачей</div>
                     </div>
                 </div>
                 <!--THREE TASK CLOSE-->
@@ -187,13 +209,15 @@
                                 <span class="icon icon-list"></span>
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente soluta ullam ut velit voluptate.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem corporis
+                                cumque enim esse est et illo ipsa itaque, maiores maxime quae quod, recusandae sapiente
+                                soluta ullam ut velit voluptate.
                             </div>
                         </div>
                         <div class="task-check-row">
-                            <label class = "checkBox">
+                            <label class="checkBox">
                                 <input type="checkbox" name="check">
-                                <span class = "label-text">Задача еще не выполнена</span>
+                                <span class="label-text">Задача еще не выполнена</span>
                             </label>
                         </div>
                         <div class="task-edit-row">
@@ -209,13 +233,60 @@
 </main>
 <!--MAIN END-->
 
+<div class="overlay"></div>
+<div class="edit-task">
+    <div class="container">
+        <form>
+            <div class="main-information">
+                <div class="categories">
+                    <div class="chose-category">
+                        <span>Новая задача</span>
+                        <select>
+                            <option value="" disabled selected>Категория</option>
+                            <option value="" class="option">Дом</option>
+                            <option value="" class="option">Работа</option>
+                            <option value="" class="option">Спорт</option>
+                        </select>
+                    </div>
+                    <div class="inputs">
+                        <span class="icon icon-bell"></span>
+                        <span>Оповестить за</span>
+                        <input type="time" name="time" class="taskAdd">
+                        <input type="date" name="date" class="taskAdd">
+                        <input type="hidden" name="status" value="undone" class="taskAdd">
+                    </div>
+                </div>
+                <span class="hint">Ваша задача</span>
+                <textarea id="textarea" name="taskText" class="taskAdd" maxlength="1000"
+                          placeholder="Ваша задача"></textarea>
+                <div class="count-text">
+                    <span class="count">0</span>
+                    <span class="total-count">/1000</span>
+                </div>
+            </div>
+            <div class="send">
+                <button class="edit-task-btn">Добавить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <!--jQuery-->
+
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+<script src="js/jquery.formstyler.min.js" defer></script>
+<script src="js/core.js" defer></script>
 <script src="js/interface.js"></script>
+<script src="js/loadTask.js"></script>
+<script src="js/editTask.js"></script>
+
+
 
 </body>
 </html>
